@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <div id="pageHeroPlaceholder"
+                data-title="About ERAAR Construction"
+                data-description="Your Trusted Partner for Quality Construction and Renovation in London."
+                data-background="../images/page-hero-bg.JPG">
+            </div>
+     
+
+            <section class="about-details content-section"> <div
+                    class="container">
+                    <div class="about-detail-item"> <div class="about-content">
+                            <h2>Our Story</h2>
+                            <p>Founded in London with a vision to transform the
+                                urban landscape, Eraar Construction has grown
+                                from a passionate team of builders into a
+                                leading construction firm. Over the years, we've
+                                built a reputation for reliability, exceptional
+                                craftsmanship, and a client-centric approach.
+                                Our commitment extends beyond construction; we
+                                aim to build lasting relationships based on
+                                trust and mutual respect.</p>
+                            <p>We pride ourselves on our meticulous attention to
+                                detail, innovative solutions, and unwavering
+                                dedication to every project, big or small. From
+                                residential renovations to large-scale
+                                commercial developments, our portfolio reflects
+                                our versatility and expertise.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="./images/our_story.png"
+                                alt="Eraar Construction team meeting">
+                        </div>
+                    </div>
+
+                    <div class="about-detail-item reverse"> <div
+                            class="about-content">
+                            <h2>Our Values</h2>
+                            <p>Our core values guide every decision and action,
+                                ensuring we uphold the highest standards in
+                                everything we do.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Quality:
+                                    Delivering superior results that stand the
+                                    test of time.</li>
+                                <li><i class="fas fa-handshake"></i> Integrity:
+                                    Operating with honesty, transparency, and
+                                    ethical practices.</li>
+                                <li><i class="fas fa-lightbulb"></i> Innovation:
+                                    Embracing new technologies and methods for
+                                    efficient and sustainable construction.</li>
+                                <li><i class="fas fa-users-cog"></i>
+                                    Collaboration: Working closely with clients,
+                                    architects, and suppliers to achieve shared
+                                    goals.</li>
+                                <li><i class="fas fa-shield-alt"></i> Safety:
+                                    Ensuring the highest safety standards on
+                                    every worksite.</li>
+                            </ul>
+                        </div>
+                        <div class="about-image">
+                            <img src="./images/our_value.png"
+                                alt="Construction site safety equipment">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <div id="about-cta-placeholder"></div>
+
+        </main>
+        <div id="footer-placeholder"></div>
+
+        <!-- Global JavaScripts -->
+        <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js"
+            crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script> <!-- Your main JavaScript file -->
+        <script src="./js/page-hero.js"></script>
+        <script src="./js/cta.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // main.js will load Header and Footer.
+
+            // Load CTA Section for About Us page
+            loadCtaSection(
+                'about-cta-placeholder',
+                'Ready to build your vision with a trusted partner?',
+                'Get in touch with Eraar Construction today for a no-obligation consultation.',
+                'Contact Our Team',
+                '/contact.html'
+            );
+
+            // Highlight active nav link (part of main.js but called after components load)
+            highlightActiveNav(); // This will highlight 'About'
+        });
+    </script>
+
+    </body>
+</html>

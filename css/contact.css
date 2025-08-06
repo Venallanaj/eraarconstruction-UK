@@ -1,0 +1,259 @@
+/* --- CSS Variables for Brand Colors (if not in style.css, otherwise omit) --- */
+/*
+:root {
+    --eraar-dark-blue: #1a375e;
+    --eraar-gold-brown: #c09a53;
+    --text-light: #f0f0f0;
+    --text-dark: #333;
+    --neutral-light-grey: #f5f5f5;
+    --neutral-medium-grey: #666;
+    --header-bg-color: #ffffff;
+    --header-text-color: var(--eraar-dark-blue);
+}
+*/
+/* The above :root block should ideally reside in your main style.css */
+
+/* --- Contact Page Specific Styles --- */
+
+/* Utility Classes - These could also live in style.css if used globally */
+.icon-brand-color {
+  color: var(--eraar-gold-brown);
+}
+
+.text-link {
+  color: var(--eraar-gold-brown);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.text-link:hover {
+  color: #e08412; /* Slightly darker gold-brown on hover */
+  text-decoration: underline;
+}
+
+/* --- Section overrides/specifics for Contact Page --- */
+/* If section-title, section-subtitle, section-padding are defined globally,
+   only include overrides here. Otherwise, these are the full definitions. */
+
+/* Assuming these general section styles are already in style.css,
+   we only include specific color overrides or layout adjustments. */
+
+.section-title.text-center {
+  /* For the "Locate Our Office" title */
+  color: var(--eraar-dark-blue);
+  margin-bottom: 50px;
+  padding-top: 60px; /* If section-padding on map section is 0 */
+}
+
+.section-title::after {
+  /* Override if different for contact page titles */
+  background-color: var(--eraar-gold-brown);
+}
+
+/* --- Main Contact Content Section (Two Columns Layout) --- */
+.contact-columns-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Info column (left) is 1 part, Form column (right) is 1.5 parts */
+  gap: 60px; /* Space between the two columns */
+  align-items: start; /* Aligns content to the top of each column */
+  margin-top: 40px; /* Space below the section subtitle */
+}
+
+/* --- Left Column: Contact Information Styling --- */
+.contact-info-column {
+  background-color: var(
+    --neutral-light-grey
+  ); /* Light grey background for info */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow like other cards/elements */
+}
+
+.contact-detail-group {
+  margin-bottom: 30px; /* Space between each distinct group of contact details */
+}
+
+.contact-detail-group:last-child {
+  margin-bottom: 0; /* No bottom margin for the very last detail group */
+}
+
+.contact-detail-group h3 {
+  font-size: 2.5rem;
+  color: var(--eraar-dark-blue); /* Dark blue for contact info headings */
+  margin-bottom: 15px;
+  display: flex; /* Allows icon and text to sit side-by-side */
+  align-items: center;
+  font-weight: 700; /* Bolder heading */
+  gap: 1rem;
+}
+
+.contact-detail-group p {
+  font-size: 1em;
+  color: var(
+    --neutral-medium-grey
+  ); /* Neutral medium grey for paragraph text */
+  line-height: 1.6;
+  margin-bottom: 5px; /* Smaller margin for lines of text within a group */
+}
+
+/* --- Right Column: Contact Form Styling --- */
+.contact-form-column {
+  background-color: #fff; /* White background for the form for better contrast */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+}
+
+.contact-form-column h3 {
+  font-size: 1.8em;
+  color: var(--eraar-dark-blue); /* Dark blue for form heading */
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Form Group Styles (ensure consistency with previous forms) */
+.main-contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.main-contact-form .form-group label {
+  display: block;
+  font-size: 0.95em;
+  color: var(--text-dark); /* Dark color for form labels */
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.main-contact-form .form-group input[type="text"],
+.main-contact-form .form-group input[type="email"],
+.main-contact-form .form-group input[type="tel"],
+.main-contact-form .form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  color: var(--text-dark); /* Dark color for form input text */
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensures padding/border are included in width */
+}
+
+.main-contact-form .form-group input[type="text"]::placeholder,
+.main-contact-form .form-group input[type="email"]::placeholder,
+.main-contact-form .form-group input[type="tel"]::placeholder,
+.main-contact-form .form-group textarea::placeholder {
+  color: var(--neutral-medium-grey); /* Medium grey for placeholders */
+  font-style: italic;
+}
+
+.main-contact-form .form-group input:focus,
+.main-contact-form .form-group textarea:focus {
+  border-color: var(--eraar-gold-brown); /* Brand gold-brown on focus */
+  /* Assuming you have a way to convert hex to rgba for box-shadow */
+  /* Example: #c09a53 is rgb(192, 154, 83) */
+  box-shadow: 0 0 0 3px rgba(192, 154, 83, 0.25); /* Subtle glow with brand color */
+  outline: none; /* Remove default outline */
+}
+
+.main-contact-form .form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Button styling (using existing .btn.btn-primary defined in style.css) */
+/* We only override specific properties here if needed */
+.main-contact-form .btn-primary {
+  background-color: var(--eraar-gold-brown); /* Brand gold-brown for button */
+  width: 100%; /* Make button full width within the form column */
+  padding: 16px 30px;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.main-contact-form .btn-primary:hover {
+  background-color: var(--eraar-dark-blue); /* Slightly darker shade on hover */
+  transform: translateY(-2px); /* Add a subtle lift effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Google Map Section (Full Width, below the two columns) --- */
+.google-map-section {
+  padding-top: 0; /* No top padding here as it follows a section with its own padding/title padding */
+  padding-bottom: 80px; /* Consistent bottom padding */
+  background-color: var(
+    --neutral-light-grey
+  ); /* Light grey for the map section */
+}
+
+.google-map-section .section-title {
+  margin-bottom: 50px; /* Space between title and map */
+  padding-top: 60px; /* Add top padding to the title itself */
+}
+
+.map-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio for responsiveness */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+}
+
+.map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- Responsive Adjustments (for contact.css specific elements) --- */
+@media (max-width: 992px) {
+  .contact-columns-wrapper {
+    grid-template-columns: 1fr; /* Stacks columns on tablet/mobile */
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-column,
+  .contact-form-column {
+    padding: 25px;
+  }
+  .contact-detail-group h3 {
+    font-size: 1.3em;
+  }
+  .contact-detail-group h3 .icon-brand-color {
+    font-size: 1.1em;
+    margin-right: 10px;
+  }
+  .main-contact-form .btn-primary {
+    padding: 14px 20px;
+    font-size: 1.05em;
+  }
+  .google-map-section .section-title {
+    padding-top: 40px; /* Adjust map title padding */
+    margin-bottom: 30px;
+  }
+  .map-embed {
+    margin-top: 20px; /* Adjust map margin */
+  }
+}
+
+@media (max-width: 576px) {
+  .main-contact-form .form-group input,
+  .main-contact-form .form-group textarea {
+    padding: 12px 15px;
+  }
+  /* section-padding is usually in style.css, but if specifically needed for contact.css: */
+  /* .section-padding { padding: 40px 0; } */
+}

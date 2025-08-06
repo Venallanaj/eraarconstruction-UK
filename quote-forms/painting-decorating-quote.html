@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting & Decorating Quote - Eraar Construction</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/quote-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+       <section class="page-hero small-hero">
+            <div class="container">
+                <h1 id="page-hero-title">Painting & Decorating Quote</h1>
+                <p id="page-hero-subtitle">Provide details for your painting and decorating project to get a free quote.</p>
+            </div>
+        </section>
+
+        <section class="quote-form-section content-section">
+            <div class="container">
+                <form id="paintingDecoratingForm" class="quote-form">
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="e.g. John Smith" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address <span class="required">*</span></label>
+                            <p class="form-helper-text">We'll send your quote and follow-up here.</p>
+                            <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g. you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                            <p class="form-helper-text">Only if we need to speak with you about your project.</p>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. 07123 456789" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Property Details</legend>
+
+                        <div class="form-group">
+                            <label for="propertyType">Type of Property <span class="required">*</span></label>
+                            <select id="propertyType" name="propertyType" required>
+                                <option value="">Select property type</option>
+                                <option value="flat">Flat</option>
+                                <option value="detached-house">Detached House</option>
+                                <option value="semi-detached-house">Semi-detached House</option>
+                                <option value="terrace-house">Terrace House</option>
+                                <option value="maisonette">Maisonette</option>
+                                <option value="bungalow">Bungalow</option>
+                                <option value="commercial-unit">Commercial Unit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numBedrooms">Number of Bedrooms <span class="required">*</span></label>
+                            <p class="form-helper-text">Enter how many bedrooms you want work done in.</p>
+                            <input type="number" id="numBedrooms" name="numBedrooms" placeholder="e.g. 3" min="0" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Additional Rooms <span class="required">*</span></label>
+                            <p class="form-helper-text">Select any other rooms that need work.</p>
+                            <label><input type="checkbox" name="additionalRooms" value="kitchen"> Kitchen</label>
+                            <label><input type="checkbox" name="additionalRooms" value="bathroom"> Bathroom</label>
+                            <label><input type="checkbox" name="additionalRooms" value="living-room"> Living Room</label>
+                            <label><input type="checkbox" name="additionalRooms" value="dining-room"> Dining Room</label>
+                            <label><input type="checkbox" name="additionalRooms" value="hallway-landing"> Hallway / Landing</label>
+                            <label><input type="checkbox" name="additionalRooms" value="stairs"> Stairs</label>
+                            <label><input type="checkbox" name="additionalRooms" value="wc-toilet"> WC / Toilet</label>
+                            <label><input type="checkbox" name="additionalRooms" value="utility-room"> Utility Room</label>
+                            <label><input type="checkbox" name="additionalRooms" value="garage"> Garage</label>
+                            <label><input type="checkbox" name="additionalRooms" value="garden-exterior"> Garden / Exterior</label>
+                            <label><input type="checkbox" name="additionalRooms" value="other-room"> Other</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Work Details</legend>
+
+                        <div class="form-group">
+                            <label for="numColours">How many different colours will be used? <span class="required">*</span></label>
+                            <p class="form-helper-text">Include all colours used across walls, ceilings, woodwork, etc.</p>
+                            <input type="number" id="numColours" name="numColours" placeholder="e.g. 3" min="1" required>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>Wall & Ceiling Condition <span class="required">*</span></label>
+                            <p class="form-helper-text">Let us know what kind of surface we'll be painting.</p>
+                            <label><input type="radio" name="wallCeilingCondition" value="newly-plastered" required> Newly Plastered</label>
+                            <label><input type="radio" name="wallCeilingCondition" value="previously-painted"> Previously Painted</label>
+                            <label><input type="radio" name="wallCeilingCondition" value="mixed-not-sure"> Mixed / Not Sure</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Preferred Paint Brand <span class="required">*</span></label>
+                            <p class="form-helper-text">Choose which brand(s) you'd like us to use.</p>
+                            <label><input type="checkbox" name="paintBrand" value="dulux-trade"> Dulux Trade</label>
+                            <label><input type="checkbox" name="paintBrand" value="dulux-heritage"> Dulux Heritage</label>
+                            <label><input type="checkbox" name="paintBrand" value="crown"> Crown</label>
+                            <label><input type="checkbox" name="paintBrand" value="johnstones"> Johnstone's</label>
+                            <label><input type="checkbox" name="paintBrand" value="farrow-ball"> Farrow & Ball</label>
+                            <label><input type="checkbox" name="paintBrand" value="little-greene"> Little Greene</label>
+                            <label><input type="checkbox" name="paintBrand" value="benjamin-moore"> Benjamin Moore</label>
+                            <label><input type="checkbox" name="paintBrand" value="sherwin-williams"> Sherwin-Williams</label>
+                            <label><input type="checkbox" name="paintBrand" value="no-preference"> No Preference</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Preferred Paint Finish <span class="required">*</span></label>
+                            <p class="form-helper-text">Select the type of paint finish you'd prefer.</p>
+                            <label><input type="checkbox" name="paintFinish" value="vinyl-matt"> Vinyl Matt</label>
+                            <label><input type="checkbox" name="paintFinish" value="durable-matt"> Durable Matt</label>
+                            <label><input type="checkbox" name="paintFinish" value="soft-sheen"> Soft Sheen</label>
+                            <label><input type="checkbox" name="paintFinish" value="satinwood"> Satinwood</label>
+                            <label><input type="checkbox" name="paintFinish" value="gloss"> Gloss</label>
+                            <label><input type="checkbox" name="paintFinish" value="eggshell"> Eggshell</label>
+                            <label><input type="checkbox" name="paintFinish" value="easycare-washable"> EasyCare / Washable</label>
+                            <label><input type="checkbox" name="paintFinish" value="no-preference-finish"> No Preference</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paintColours">Paint Colour(s) <span class="required">*</span></label>
+                            <p class="form-helper-text">Please list the colour names and where they will be applied. For example: "Walls – Timeless White, Ceilings – Brilliant White, Doors – Satinwood White".</p>
+                            <textarea id="paintColours" name="paintColours" rows="4" placeholder="e.g. Walls – Timeless White, Ceilings – Brilliant White" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="uploadPhotos">Upload Photos</label>
+                            <p class="form-helper-text">Upload any relevant images of the space (max 5).</p>
+                            <input type="file" id="uploadPhotos" name="uploadPhotos" accept="image/*" multiple>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeframe">Timeframe for the Work <span class="required">*</span></label>
+                            <input type="text" id="timeframe" name="timeframe" placeholder="e.g. As soon as possible, within 1 month" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredStartDate">Preferred Start Date <span class="required">*</span></label>
+                            <p class="form-helper-text">Choose your ideal time for the job to begin.</p>
+                            <input type="date" id="preferredStartDate" name="preferredStartDate" required>
+                        </div>
+                    </fieldset>
+
+                   <fieldset>
+                        <legend>Declaration & Consent <span class="required">*</span></legend>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="consent" name="consent" required>
+                                I confirm the information provided is true and accurate, and I understand the terms of this quote request.
+                            </label>
+                            <p class="form-helper-text">This is a serious inquiry. Submitting false or misleading information may lead to legal action as per our Terms of Service and UK consumer protection law.</p>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button primary">Send Quote Request</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // main.js will load Header and Footer.
+            highlightActiveNav();
+        });
+    </script>
+</body>
+</html>

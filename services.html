@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Services - Eraar Construction</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+        .contact-cta-section {
+  background-color: white;
+}
+            </style>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <div id="pageHeroPlaceholder"
+                 data-title="Our Comprehensive Construction Services"
+             data-description="Delivering Excellence Across All Aspects of Building and Renovation in London."
+                data-background="../images/page-hero-bg.JPG">
+            </div>
+
+            <section class="services-overview">
+                <div id="services-component">
+                </div>
+            </section>
+
+            <div id="about-cta-placeholder" c></div>
+        </main>
+
+        <div id="footer-placeholder"></div>
+
+        <!-- Global JavaScripts -->
+        <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js"
+            crossorigin="anonymous"></script>
+
+        <script src="./js/main.js"></script> <!-- Your main JavaScript file -->
+        <script src="./js/services.js"></script>
+        <script src="./js/page-hero.js"></script>
+        <script src="./js/cta.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // main.js will load Header and Footer.
+
+            // Load CTA Section for About Us page
+            loadCtaSection(
+                'about-cta-placeholder',
+                'Ready to build your vision with a trusted partner?',
+                'Get in touch with Eraar Construction today for a no-obligation consultation.',
+                'Contact Our Team',
+                '/contact.html'
+            );
+
+            // Highlight active nav link (part of main.js but called after components load)
+            highlightActiveNav(); // This will highlight 'About'
+        });
+    </script>
+        <script>
+        // This script runs after services.js is loaded.
+        // It calls the main function from services.js to load the component.
+        document.addEventListener('DOMContentLoaded', () => {
+            loadServicesComponent('services-component', false); // 'false' means load only the preview (first 3)
+        });
+    </script>
+
+    </body>
+</html>

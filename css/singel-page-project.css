@@ -1,0 +1,100 @@
+/* General Styling for Sections */
+.gallery-section {
+    padding: 4.0rem 0; /* 40px -> 4rem */
+    /* background-color: #f9f9f9; */
+    margin-bottom: 4.0rem; /* 40px -> 4rem */
+}
+
+.gallery-section h2,
+.gallery-section h3 {
+    text-align: center;
+    margin-bottom: 3.0rem; /* 30px -> 3rem */
+}
+
+.gallery-section h3 {
+    margin-top: 4.0rem; /* 40px -> 4rem */
+}
+
+/* Styles for the project detail content */
+.project-detail-hero {
+    background-color: #f0f0f0; /* Example background */
+    padding: 6.0rem 0; /* 60px -> 6rem */
+  
+}
+
+.project-detail-hero h1 {
+ /* 3em -> 3rem */
+    color: var(--eraar-dark-blue); /* Assuming you have this variable */
+    margin-bottom: 1.5rem; /* 15px -> 1.5rem */
+}
+
+.project-detail-hero p {
+  /* 1.2em -> 1.2rem */
+    color: #666;
+    margin-bottom: 2.5rem; /* 25px -> 2.5rem */
+}
+
+.project-details-content {
+    padding: 6.0rem 0; /* 60px -> 6rem */
+    background-color: #ffffff;
+}
+
+
+
+.project-description h2 {
+ 
+    margin-bottom: 2.0rem; /* 20px -> 2rem */
+}
+
+.project-description p {
+
+ 
+    color: #555;
+    margin-bottom: 1.5rem; /* 15px -> 1.5rem */
+}
+
+
+.gallery-befor-after {
+  background-color: #f0f0f0;
+}
+
+/* Slick Slider Specific Styles (General for all sliders) */
+.slick-slider-wrapper {
+    margin-bottom: 4.0rem; /* 40px -> 4rem */
+    padding: 0 2.0rem; /* 0 20px -> 0 2rem */
+}
+
+.slick-slide {
+    margin: 0 1.5rem; /* 0 10px -> 0 1rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-slide img {
+    max-width: 100%;
+    width: 100%;
+    height: 30.5rem; 
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem; /* 8px -> 0.8rem */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* 0 5px 15px -> 0 0.5rem 1.5rem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slick-slide img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.2); /* 0 8px 25px -> 0 0.8rem 2.5rem */
+}
+
+.slick-list {
+    margin: 0 -1.0rem; /* 0 -10px -> 0 -1rem */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #333;
+}
+
+
+

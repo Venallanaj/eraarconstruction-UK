@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flooring Quote - Eraar Construction</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quote-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero small-hero">
+            <div class="container">
+                <h1 id="page-hero-title">Flooring Services Quote</h1>
+                <p id="page-hero-subtitle">Provide details about your flooring project to get a free, no-obligation quote.</p>
+            </div>
+        </section>
+
+        <section class="quote-form-section content-section">
+            <div class="container">
+                <form id="flooringForm" class="quote-form">
+                    <!-- Personal Details -->
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="e.g., John Smith" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address <span class="required">*</span></label>
+                            <p class="form-helper-text">We'll use this to contact you about your flooring quote.</p>
+                            <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g., john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                            <p class="form-helper-text">Include a number where we can reach you to arrange a site visit.</p>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g., 07700 900123" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- Property & Flooring Details -->
+                    <fieldset>
+                        <legend>Project Details</legend>
+
+                        <div class="form-group">
+                            <label for="propertyType">Type of Property <span class="required">*</span></label>
+                            <p class="form-helper-text">Select the type of property where the flooring work is needed.</p>
+                            <select id="propertyType" name="propertyType" required>
+                                <option value="">Select property type...</option>
+                                <option value="house">House</option>
+                                <option value="flat-apartment">Flat / Apartment</option>
+                                <option value="bungalow">Bungalow</option>
+                                <option value="commercial-property">Commercial Property</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Flooring Areas <span class="required">*</span></label>
+                            <p class="form-helper-text">Select all areas where flooring will be installed.</p>
+                            <label><input type="checkbox" name="flooringAreas" value="living-room"> Living Room</label>
+                            <label><input type="checkbox" name="flooringAreas" value="kitchen"> Kitchen</label>
+                            <label><input type="checkbox" name="flooringAreas" value="bathroom"> Bathroom</label>
+                            <label><input type="checkbox" name="flooringAreas" value="bedroom"> Bedroom</label>
+                            <label><input type="checkbox" name="flooringAreas" value="hallway-stairs"> Hallway / Stairs</label>
+                            <label><input type="checkbox" name="flooringAreas" value="entire-floor"> Entire Floor</label>
+                            <label><input type="checkbox" name="flooringAreas" value="other"> Other</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="uploadRoomPhotos">Upload Room Photos <span class="required">*</span></label>
+                            <p class="form-helper-text">Upload photos of the existing flooring or areas where work is needed.</p>
+                            <input type="file" id="uploadRoomPhotos" name="uploadRoomPhotos" accept="image/*" multiple required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Type of Flooring <span class="required">*</span></label>
+                            <p class="form-helper-text">Choose the type of flooring you want installed.</p>
+                            <label><input type="checkbox" name="flooringType" value="laminate"> Laminate</label>
+                            <label><input type="checkbox" name="flooringType" value="vinyl"> Vinyl</label>
+                            <label><input type="checkbox" name="flooringType" value="engineered-wood"> Engineered Wood</label>
+                            <label><input type="checkbox" name="flooringType" value="solid-wood"> Solid Wood</label>
+                            <label><input type="checkbox" name="flooringType" value="lvt"> LVT (Luxury Vinyl Tile)</label>
+                            <label><input type="checkbox" name="flooringType" value="carpet"> Carpet</label>
+                            <label><input type="checkbox" name="flooringType" value="tiling"> Tiling</label>
+                            <label><input type="checkbox" name="flooringType" value="not-sure"> Not Sure Yet</label>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>Remove Existing Flooring? <span class="required">*</span></label>
+                            <p class="form-helper-text">Let us know if we need to remove old flooring first.</p>
+                            <label><input type="radio" name="removeExistingFlooring" value="yes" required> Yes</label>
+                            <label><input type="radio" name="removeExistingFlooring" value="no"> No</label>
+                            <label><input type="radio" name="removeExistingFlooring" value="not-sure"> Not Sure</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Subfloor Preparation <span class="required">*</span></label>
+                            <p class="form-helper-text">Tick any subfloor work you think might be needed.</p>
+                            <label><input type="checkbox" name="subfloorPreparation" value="new-underlay"> New Underlay</label>
+                            <label><input type="checkbox" name="subfloorPreparation" value="screed-levelling-compound"> Screed / Levelling Compound</label>
+                            <label><input type="checkbox" name="subfloorPreparation" value="dpm"> DPM (Damp Proof Membrane)</label>
+                            <label><input type="checkbox" name="subfloorPreparation" value="not-sure"> Not Sure</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="totalAreaSize">Total Area Size <span class="required">*</span></label>
+                            <p class="form-helper-text">Approximate size of the area to be floored, in square meters.</p>
+                            <input type="number" id="totalAreaSize" name="totalAreaSize" placeholder="e.g., 35" min="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredStartDate">When would you like the work to start? <span class="required">*</span></label>
+                            <p class="form-helper-text">Please select your preferred date.</p>
+                            <input type="date" id="preferredStartDate" name="preferredStartDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalComments">Additional Comments <span class="required">*</span></label>
+                            <p class="form-helper-text">Let us know anything else about your project, special requests, or site access info.</p>
+                            <textarea id="additionalComments" name="additionalComments" rows="6" placeholder="e.g., We're doing full ground floor laminate, please advise on underlay options." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estimatedBudget">Estimated Budget <span class="required">*</span></label>
+                            <p class="form-helper-text">Helps us provide a suitable quote.</p>
+                            <select id="estimatedBudget" name="estimatedBudget" required>
+                                <option value="">Select a budget range...</option>
+                                <option value="under-1k">Under £1,000</option>
+                                <option value="1k-3k">£1,000 - £3,000</option>
+                                <option value="3k-5k">£3,000 - £5,000</option>
+                                <option value="5k-10k">£5,000 - £10,000</option>
+                                <option value="over-10k">Over £10,000</option>
+                                <option value="not-sure">Not sure yet</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <!-- Declaration & Consent -->
+       
+                    <fieldset>
+                        <legend>Declaration & Consent <span class="required">*</span></legend>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="consent" name="consent" required>
+                                I confirm the information provided is true and accurate, and I understand the terms of this quote request.
+                            </label>
+                            <p class="form-helper-text">This is a serious inquiry. Submitting false or misleading information may lead to legal action as per our Terms of Service and UK consumer protection law.</p>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button primary">Request Flooring Quote</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            highlightActiveNav(); // Highlights the appropriate navigation link
+        });
+    </script>
+</body>
+</html>

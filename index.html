@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Eraar Construction</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+        <!-- Using root-relative path for CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- Placeholder for the header component -->
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- Your unique content for the homepage starts here -->
+
+            <section class="hero-section">
+                <div class="hero-content container">
+                    <h1>BUILDING LONDON'S LANDMARKS. DELIVERING EXCELLENCE.</h1>
+                    <p>Your Trusted Partner for Commercial & Residential
+                        Construction in the UK.</p>
+                    <div class="hero-buttons">
+                        <a href="gallery.html" class="cta-button primary">View
+                            Our Projects</a>
+                        <a href="contact.html"
+                            class="cta-button secondary">Request a
+                            Consultation</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us-snapshot">
+                <div class="container content-grid">
+                    <div class="about-image">
+                        <img src="./images/aboutus_eraarconstruction.png"
+                            alt="Eraar Construction Team">
+                    </div>
+                    <div class="about-text">
+                        <h2>Welcome to Eraar Construction: Building on
+                            Trust</h2>
+                        <h3>London's Partner in Sustainable Development</h3>
+                        <p>With a deep understanding of London's unique
+                            architectural landscape and over X years of
+                            expertise, Eraar Construction is dedicated to
+                            delivering projects that exceed expectations. From
+                            iconic commercial spaces to bespoke residential
+                            builds, our commitment to quality, safety, and
+                            innovation stands paramount.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Decades of
+                                London-Specific Experience</li>
+                            <li><i class="fas fa-check"></i> Unwavering
+                                Commitment to Quality</li>
+                            <li><i class="fas fa-check"></i> Sustainable &
+                                Innovative Building Practices</li>
+                        </ul>
+                        <a href="about.html" class="cta-button primary">Learn
+                            More About Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services section - will be made a component later -->
+            <!-- This file contains the HTML for the Services Overview Section, no full document tags -->
+
+            <section class="services-overview">
+                <div id="services-component">
+                </div>
+            </section>
+
+            <section class="featured-projects">
+                <div class="container">
+                    <h2>Our Portfolio: London's Architectural Canvas</h2>
+                    <p class="section-intro">Explore a selection of our recent
+                        projects that showcase our commitment to excellence.</p>
+                    <div class="projects-grid">
+                        <a href="./project-details/interior-painting-decorating.html"
+                            class="project-card">
+                            <img src="/images/image1.png"
+                                alt="The City Lofts Project">
+                            <div class="project-overlay">
+                                <h4>The City Lofts</h4>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>The City Lofts</h3>
+                                <p>Residential, Central London</p>
+                            </div>
+                        </a>
+                        <a href="./project-details/interior-renovation.html"
+                            class="project-card">
+                            <img src="/images/image2.png"
+                                alt="Greenwich Commercial Hub Project">
+                            <div class="project-overlay">
+                                <h4>Greenwich Commercial Hub</h4>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Greenwich Commercial Hub</h3>
+                                <p>Commercial, East London</p>
+                            </div>
+                        </a>
+                        <a href="./project-details/interior-flooring.html"
+                            class="project-card">
+                            <img src="/images/image1.png"
+                                alt="Historic Soho Renovation Project">
+                            <div class="project-overlay">
+                                <h4>Historic Soho Renovation</h4>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Historic Soho Renovation</h3>
+                                <p>Renovation, West London</p>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="gallery.html"
+                        class="cta-button secondary centered-button">View All
+                        Projects</a>
+                </div>
+            </section>
+
+            <section class="testimonials-section">
+                <div class="container">
+                    <h2>What Our Clients Are Saying</h2>
+                    <div class="testimonial-slider">
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"Eraar Construction transformed our vision into a reality with unparalleled professionalism and attention to detail. Their team in London is truly exceptional."</p>
+                            <span>&mdash; Jane Doe, CEO of London Properties
+                                Inc.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="final-cta-section bg-white">
+                <div class="container">
+                    <h2>Ready to Discuss Your Next London Project?</h2>
+                    <p>Contact Eraar Construction today for a no-obligation
+                        consultation and expert advice.</p>
+                    <a href="./contact.html" class="cta-button primary">CONTACT
+                        US TODAY</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Placeholder for the footer component -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Global JavaScripts -->
+        <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js"
+            crossorigin="anonymous"></script>
+
+        <script src="./js/main.js"></script> <!-- Your main JavaScript file -->
+        <script src="./js/services.js"></script>
+        <script>
+        // This script runs after services.js is loaded.
+        // It calls the main function from services.js to load the component.
+        document.addEventListener('DOMContentLoaded', () => {
+            loadServicesComponent('services-component', false); // 'false' means load only the preview (first 3)
+        });
+    </script>
+
+    </body>
+</html>

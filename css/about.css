@@ -1,0 +1,190 @@
+/* --- Page Hero Section --- */
+.page-hero {
+    background: url('../images/page-hero-bg.JPG') no-repeat center center/cover; /* Placeholder background image */
+    color: var(--text-light);
+    text-align: center;
+    padding: 10rem 0; /* More padding for a grander hero */
+    position: relative;
+    margin-bottom: 6rem; /* Space below the hero */
+    overflow: hidden; /* Important for background image containment */
+    /* background-color: #1A375E !important; */
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero h1 {
+    font-family: 'Montserrat', sans-serif; /* Use your strong font for headings */
+    font-size: 5.2rem; /* 52px */
+    margin-bottom: 2rem; /* 20px */
+    color: white; /* Ensure visible on dark overlay */
+}
+
+.page-hero p {
+    font-size: 2rem; /* 20px */
+    max-width: 90rem; /* 900px */
+    margin: 0 auto;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* --- About Details Section --- */
+.about-details .about-detail-item {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    gap: 5rem; /* Space between text and image columns (50px) */
+    margin-bottom: 6rem; /* Space between multiple detail items (60px) */
+}
+
+/* Remove bottom margin for the last detail item */
+.about-details .about-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.about-details .about-content {
+    flex: 1; /* Text column takes equal space */
+}
+
+.about-details .about-image {
+    flex: 1; /* Image column takes equal space */
+}
+
+.about-details .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem; /* 8px rounded corners */
+    box-shadow: 0 1rem 3rem var(--box-shadow-light); /* Subtle shadow */
+    display: block; /* Ensures no extra space below image */
+}
+
+.about-details h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem; /* 40px */
+    margin-bottom: 2rem; /* 20px */
+    color: var(--primary-blue); /* Or your main heading color */
+}
+
+.about-details p {
+    font-size: 1.7rem; /* 17px */
+    line-height: 1.7;
+    margin-bottom: 1.5rem; /* 15px */
+    color: var(--neutral-dark-grey);
+}
+
+.about-details ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin-top: 2rem; /* 20px */
+}
+
+.about-details ul li {
+    font-size: 1.7rem;
+    margin-bottom: 1rem; /* 10px */
+    color: var(--text-dark);
+    display: flex; /* For icon alignment */
+    align-items: flex-start; /* Align icon and text at the top */
+}
+
+.about-details ul li i {
+    color: var(--eraar-gold-brown); /* Your brand gold/brown for icons */
+    margin-right: 1.2rem; /* 12px space after icon */
+    min-width: 2rem; /* Ensure icon has space and aligns */
+    text-align: center; /* Center icon within its space */
+    font-size: 1.8rem; /* Icon size */
+}
+
+/* Modifier class to reverse the layout (image on left, text on right) */
+.about-details .about-detail-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 992px) { /* Tablets */
+    .page-hero {
+        padding: 8rem 0;
+        margin-bottom: 4rem;
+    }
+    .page-hero h1 {
+        font-size: 4.5rem;
+    }
+    .page-hero p {
+        font-size: 1.8rem;
+    }
+
+    .about-details .about-detail-item {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 4rem; /* Reduce gap */
+        margin-bottom: 4rem;
+    }
+    .about-details .about-detail-item.reverse {
+        flex-direction: column; /* Ensure it also stacks */
+    }
+    .about-details .about-content,
+    .about-details .about-image {
+        width: 100%; /* Take full width when stacked */
+        max-width: 70rem; /* Optional: limit content width for readability */
+        margin: 0 auto; /* Center content */
+    }
+    .about-details h2,
+    .about-details p {
+        text-align: center; /* Center text on smaller screens */
+    }
+    .about-details ul {
+        padding-left: 0; /* Remove default padding for lists */
+        width: fit-content; /* Make the list itself only as wide as its content */
+        margin: 0 auto; /* Center the list */
+    }
+    .about-details ul li {
+        justify-content: flex-start; /* Keep list items left-aligned within their container */
+        text-align: left; /* Ensure text itself is left-aligned */
+    }
+}
+
+@media (max-width: 768px) { /* Smaller Tablets / Large Phones */
+    .page-hero h1 {
+        font-size: 3.8rem;
+    }
+    .page-hero p {
+        font-size: 1.6rem;
+    }
+    .about-details h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile Phones */
+    .page-hero {
+        padding: 6rem 0;
+        margin-bottom: 3rem;
+    }
+    .page-hero h1 {
+        font-size: 3.2rem;
+    }
+    .page-hero p {
+        font-size: 1.5rem;
+    }
+    .about-details .about-detail-item {
+        gap: 3rem;
+    }
+    .about-details h2 {
+        font-size: 3rem;
+    }
+    .about-details p,
+    .about-details ul li {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovation Quote - Eraar Construction</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quote-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero small-hero">
+            <div class="container">
+                <h1 id="page-hero-title">Renovation Services Quote</h1>
+                <p id="page-hero-subtitle">Tell us about your renovation project to receive a free, no-obligation quote.</p>
+            </div>
+        </section>
+
+        <section class="quote-form-section content-section">
+            <div class="container">
+                <form id="renovationForm" class="quote-form">
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Please enter your full name." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address <span class="required">*</span></label>
+                            <p class="form-helper-text">A valid email address is required. We'll send your quote and follow-up details to this address.</p>
+                            <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g., you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                            <p class="form-helper-text">Provide your mobile or landline in case we need to reach you.</p>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g., 07700 900123" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Project Details</legend>
+
+                        <div class="form-group">
+                            <label for="propertyType">Type of Property <span class="required">*</span></label>
+                            <p class="form-helper-text">Choose the type of property involved.</p>
+                            <select id="propertyType" name="propertyType" required>
+                                <option value="">Select property type...</option>
+                                <option value="detached">Detached</option>
+                                <option value="semi-detached">Semi-Detached</option>
+                                <option value="flat-apartment">Flat / Apartment</option>
+                                <option value="bungalow">Bungalow</option>
+                                <option value="commercial-unit">Commercial Unit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numBedroomsRenovate">Number of Bedrooms to Renovate <span class="required">*</span></label>
+                            <p class="form-helper-text">Indicate how many bedrooms will be included in the project.</p>
+                            <input type="number" id="numBedroomsRenovate" name="numBedroomsRenovate" placeholder="e.g., 2" min="0" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Areas to Renovate <span class="required">*</span></label>
+                            <p class="form-helper-text">Tick all areas included in the renovation.</p>
+                            <label><input type="checkbox" name="areasToRenovate" value="kitchen"> Kitchen</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="bathroom"> Bathroom</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="living-room"> Living Room</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="hallway-stairs"> Hallway / Stairs</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="bedrooms"> Bedroom(s)</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="loft"> Loft</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="garage"> Garage</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="garden-outdoor"> Garden / Outdoor</label>
+                            <label><input type="checkbox" name="areasToRenovate" value="entire-property"> Entire Property</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="uploadPhotos">Upload Photos <span class="required">*</span></label>
+                            <p class="form-helper-text">Add images of the property or rooms to be renovated.</p>
+                            <input type="file" id="uploadPhotos" name="uploadPhotos" accept="image/*" multiple required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredViewingDate">Preferred Viewing Date <span class="required">*</span></label>
+                            <p class="form-helper-text">When would you like us to inspect the site?</p>
+                            <input type="date" id="preferredViewingDate" name="preferredViewingDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredTimeOfDay">Preferred Time of Day <span class="required">*</span></label>
+                            <p class="form-helper-text">Select your preferred time for a viewing.</p>
+                            <select id="preferredTimeOfDay" name="preferredTimeOfDay" required>
+                                <option value="">Select your preferred time...</option>
+                                <option value="morning">Morning (8 AM – 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM – 4 PM)</option>
+                                <option value="evening">Evening (4 PM – 7 PM)</option>
+                                <option value="anytime">Anytime</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeframe">Timeframe for the Work <span class="required">*</span></label>
+                            <p class="form-helper-text">When would you like the work to start and finish?</p>
+                            <input type="text" id="timeframe" name="timeframe" placeholder="e.g., Start mid-July, complete by September" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currentWallCeilingCondition">Current Wall/Ceiling Condition <span class="required">*</span></label>
+                            <p class="form-helper-text">Tell us about the surface — any cracks, damp, or damage?</p>
+                            <label><input type="radio" name="currentWallCeilingCondition" value="newly-plastered" required> Newly Plastered</label>
+                            <label><input type="radio" name="currentWallCeilingCondition" value="previously-painted"> Previously Painted</label>
+                            <label><input type="radio" name="currentWallCeilingCondition" value="mixed-not-sure"> Mixed / Not Sure</label>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>Any Structural or Demolition Work Needed? <span class="required">*</span></label>
+                            <p class="form-helper-text">Are there any major changes like wall removal or chimney demo?</p>
+                            <label><input type="radio" name="structuralDemolitionNeeded" value="yes" required> Yes</label>
+                            <label><input type="radio" name="structuralDemolitionNeeded" value="no"> No</label>
+                            <label><input type="radio" name="structuralDemolitionNeeded" value="not-sure"> Not Sure</label>
+                        </div>
+
+                               <div class="form-group checkbox-group">
+                            <label>What Work Needs to Be Done? <span class="required">*</span></label>
+                            <p class="form-helper-text">Select the specific work required.</p>
+                            <label><input type="checkbox" name="workToBeDone" value="painting-decorating"> Painting & Decorating</label>
+                            <label><input type="checkbox" name="workToBeDone" value="flooring"> Flooring</label>
+                            <label><input type="checkbox" name="workToBeDone" value="plastering"> Plastering</label>
+                            <label><input type="checkbox" name="workToBeDone" value="electrical"> Electrical</label>
+                            <label><input type="checkbox" name="workToBeDone" value="plumbing"> Plumbing</label>
+                            <label><input type="checkbox" name="workToBeDone" value="tiling"> Tiling</label>
+                            <label><input type="checkbox" name="workToBeDone" value="joinery"> Joinery</label>
+                            <label><input type="checkbox" name="workToBeDone" value="kitchen-fitting"> Kitchen Fitting</label>
+                            <label><input type="checkbox" name="workToBeDone" value="bathroom-installation"> Bathroom Installation</label>
+                            <label><input type="checkbox" name="workToBeDone" value="other-work"> Other</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Are Any Doors or Windows Being Modified? <span class="required">*</span></label>
+                            <p class="form-helper-text">Let us know if you're replacing or modifying doors/windows.</p>
+                            <label><input type="checkbox" name="doorWindowModification" value="new-doors"> New Doors</label>
+                            <label><input type="checkbox" name="doorWindowModification" value="remove-doors"> Remove Doors</label>
+                            <label><input type="checkbox" name="doorWindowModification" value="replace-windows"> Replace Windows</label>
+                            <label><input type="checkbox" name="doorWindowModification" value="add-skylights"> Add Skylights</label>
+                            <label><input type="checkbox" name="doorWindowModification" value="not-required"> Not Required</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>Are Any Walls, Ceilings, or Structural Features Being Altered? <span class="required">*</span></label>
+                            <p class="form-helper-text">Tick all that apply.</p>
+                            <label><input type="checkbox" name="structuralAlteration" value="wall-removal"> Wall Removal</label>
+                            <label><input type="checkbox" name="structuralAlteration" value="add-partition"> Add Partition</label>
+                            <label><input type="checkbox" name="structuralAlteration" value="ceiling-lowering"> Ceiling Lowering</label>
+                            <label><input type="checkbox" name="structuralAlteration" value="chimney-removal"> Chimney Removal</label>
+                            <label><input type="checkbox" name="structuralAlteration" value="none"> None</label>
+                            <label><input type="checkbox" name="structuralAlteration" value="other-structural"> Other</label>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>Planning Permission <span class="required">*</span></label>
+                            <p class="form-helper-text">For major works, has planning permission been obtained?</p>
+                            <label><input type="radio" name="planningPermission" value="yes-approved" required> Yes, approved</label>
+                            <label><input type="radio" name="planningPermission" value="not-yet-will-apply"> Not yet, will apply</label>
+                            <label><input type="radio" name="planningPermission" value="not-needed"> Not needed</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estimatedBudget">Estimated Budget</label>
+                            <p class="form-helper-text">Helps us tailor the quote realistically. Optional but recommended.</p>
+                            <select id="estimatedBudget" name="estimatedBudget">
+                                <option value="">Select a budget range...</option>
+                                <option value="under-10k">Under £10,000</option>
+                                <option value="10k-25k">£10,000 - £25,000</option>
+                                <option value="25k-50k">£25,000 - £50,000</option>
+                                <option value="50k-100k">£50,000 - £100,000</option>
+                                <option value="over-100k">Over £100,000</option>
+                                <option value="not-sure">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalProjectDetails">Additional Project Details <span class="required">*</span></label>
+                            <p class="form-helper-text">Describe the renovation in your own words. What are your goals or expectations? Mention damage, access, preferences, or budget.</p>
+                            <textarea id="additionalProjectDetails" name="additionalProjectDetails" rows="6" placeholder="e.g., We'd like to open up the kitchen into the dining area, replace floors and lights..." required></textarea>
+                        </div>
+
+                 
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Declaration & Consent <span class="required">*</span></legend>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="consent" name="consent" required>
+                                I confirm the information provided is true and accurate, and I understand the terms of this quote request.
+                            </label>
+                            <p class="form-helper-text">This is a serious inquiry. Submitting false or misleading information may lead to legal action as per our Terms of Service and UK consumer protection law.</p>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button primary">Send Quote Request</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            highlightActiveNav(); // Highlights the appropriate navigation link
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* --- Quote Form Section --- */
+.quote-form-section {
+    /* background-color: var(--neutral-light-grey);  */
+    /* Light background for the form area */
+    padding: 6rem 0;
+}
+
+.quote-form {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.08);
+    max-width: 80rem; /* Limit form width for readability */
+    margin: 0 auto; /* Center the form */
+}
+
+.quote-form fieldset {
+    border: 0.1rem solid var(--border-light); /* Light border for fieldsets */
+    border-radius: 0.5rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    position: relative; /* For positioning legend */
+}
+
+.quote-form legend {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem; /* Larger legend text */
+    font-weight: 600;
+    color: var(--primary-blue);
+    padding: 0 1rem;
+    background-color: white; /* Match fieldset background */
+    display: inline-block; /* Allow padding */
+    position: absolute;
+    top: -1.8rem; /* Position above the border */
+    left: 2rem;
+}
+
+.quote-form .form-group {
+    margin-bottom: 2.5rem; /* Space between form groups */
+}
+
+.quote-form label {
+    display: block; /* Each label on its own line */
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem; /* Space between label and input */
+    color: var(--text-dark);
+}
+
+.quote-form .required {
+    color: #e74c3c; /* Red color for required asterisk */
+    margin-left: 0.2rem;
+}
+
+.quote-form input[type="text"],
+.quote-form input[type="email"],
+.quote-form input[type="tel"],
+.quote-form input[type="number"],
+.quote-form input[type="date"],
+.quote-form select,
+.quote-form textarea {
+    width: 100%;
+    padding: 1.2rem 1.5rem; /* Padding inside inputs */
+    font-size: 1.6rem;
+    border: 0.1rem solid var(--text-dark); 
+    border-radius: 0.5rem;
+    box-sizing: border-box; /* Include padding/border in width */
+    color: var(--text-dark);
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.quote-form input[type="text"]:focus,
+.quote-form input[type="email"]:focus,
+.quote-form input[type="tel"]:focus,
+.quote-form input[type="number"]:focus,
+.quote-form input[type="date"]:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+    border-color: var(--eraar-gold-brown); 
+    outline: none; /* Remove default outline */
+}
+
+.quote-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 10rem;
+}
+
+.quote-form .form-helper-text {
+    font-size: 1.4rem;
+    color: var(--neutral-dark-grey);
+    margin-top: -0.5rem; /* Pull slightly closer to label */
+    margin-bottom: 1rem;
+}
+
+/* Checkbox and Radio Button Styling */
+.quote-form .checkbox-group label,
+.quote-form .radio-group label {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align checkbox/radio with text */
+    font-weight: 400; /* Regular weight for options */
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.quote-form .checkbox-group input[type="checkbox"],
+.quote-form .radio-group input[type="radio"] {
+    width: 2rem; /* Make them slightly larger */
+    height: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0; /* Prevent shrinking on small screens */
+    accent-color: var(--eraar-gold-brown); /* Style the checkbox/radio itself */
+}
+
+.quote-form .form-actions {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Button Styling (if not already globally defined for .cta-button) */
+.cta-button.primary {
+    background-color: var(--eraar-gold-brown);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* For anchor tags */
+    display: inline-block; /* For anchor tags */
+}
+
+.cta-button.primary:hover {
+    background-color: #8f745a; /* Slightly darker gold/brown on hover */
+    transform: translateY(-0.2rem);
+}
+
+/* Small Hero for Form Pages (optional, if you want a more compact hero on forms) */
+.page-hero.small-hero {
+    padding: 6rem 0; /* Less padding than main hero */
+    margin-bottom: 4rem; /* Adjust margin */
+    background-color: #f5f5f5;
+}
+
+.page-hero.small-hero h1 {
+    font-size: 4rem; /* Smaller heading */
+}
+
+.page-hero.small-hero p {
+    font-size: 1.6rem; /* Smaller paragraph */
+}
+
+
+/* --- Responsive Adjustments for Forms --- */
+@media (max-width: 768px) {
+    .quote-form {
+        padding: 2.5rem;
+    }
+    .quote-form fieldset {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    .quote-form legend {
+        font-size: 2.2rem;
+        top: -1.6rem;
+        left: 1.5rem;
+    }
+    .quote-form .form-group {
+        margin-bottom: 2rem;
+    }
+    .quote-form input[type="text"],
+    .quote-form input[type="email"],
+    .quote-form input[type="tel"],
+    .quote-form input[type="number"],
+    .quote-form input[type="date"],
+    .quote-form select,
+    .quote-form textarea {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    .quote-form .checkbox-group label,
+    .quote-form .radio-group label {
+        font-size: 1.5rem;
+    }
+    .quote-form .cta-button {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .quote-form {
+        padding: 1.5rem;
+    }
+    .quote-form fieldset {
+        padding: 1.5rem;
+    }
+    .quote-form legend {
+        font-size: 2rem;
+        top: -1.5rem;
+        left: 1rem;
+    }
+}

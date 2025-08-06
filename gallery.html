@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Projects - Eraar Construction</title>
+        <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/gallery.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
+    <body>
+
+        <div id="header-placeholder"></div>
+
+        <main>
+            <div id="pageHeroPlaceholder"
+                data-title="Our Portfolio of Works"
+                data-description="Showcasing Our Commitment to Quality and Craftsmanship in Every Project."
+                data-background="../images/page-hero-bg.JPG">
+            </div>
+
+            <section class="gallery-section">
+                <div class="container">
+                    <div class="tabs-navigation">
+                        <button class="tab-button active" data-filter="all">All
+                            Projects</button>
+                        <button class="tab-button"
+                            data-filter="painting">Painting &
+                            Decorating</button>
+                        <button class="tab-button"
+                            data-filter="renovation">Renovation</button>
+                        <button class="tab-button"
+                            data-filter="flooring">Flooring Services</button>
+                    </div>
+
+                    <div class="projects-grid gallery-grid">
+                        <a
+                            href="/project-details/interior-painting-decorating.html"
+                            class="project-card gallery-card"
+                            data-category="painting">
+                            <img src="./images/image1.png"
+                                alt="Home Painting Project Thumbnail">
+                            <div class="project-overlay">
+                                <h4>Interior Painting and Decorating</h4>
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Interior Painting & Decorating </h3>
+                                <p>Painting & Decorating</p>
+                            </div>
+                        </a>
+                        <a
+                            href="./project-details/exterior-painting-decorating.html"
+                            class="project-card gallery-card"
+                            data-category="painting">
+                            <img
+                                src="./images/projects/exterior-painting-decorating/image1.PNG"
+                                alt="Commercial Decorating Project Thumbnail">
+                            <div class="project-overlay">
+                                <h4>Exterior Painting and Decorating </h4>
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Exterior Painting and Decorating </h3>
+                                <p>Painting & Decorating</p>
+                            </div>
+                        </a>
+
+                        <a href="./project-details/interior-renovation.html"
+                            class="project-card gallery-card"
+                            data-category="renovation">
+                            <img
+                                src="./images/projects/interior-renovation/image.PNG"
+                                alt="Victorian Terrace Renovation Thumbnail">
+                            <div class="project-overlay">
+                                <h4>Interior Renovation</h4>
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Interior Renovation</h3>
+                                <p>Interior Renovation</p>
+                            </div>
+                        </a>
+                        <a href="./project-details/exterior-renovation.html"
+                            class="project-card gallery-card"
+                            data-category="renovation">
+                            <img
+                                src="./images/projects/exterior-renovation/exterior_renovation.PNG"
+                                alt="Office Fit-out Thumbnail">
+                            <div class="project-overlay">
+                                <h4>Exterior Renovation</h4>
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Exterior Renovation</h3>
+                                <p>Exterior Renovationn</p>
+                            </div>
+                        </a>
+
+                        <a href="./project-details/interior-flooring.html"
+                            class="project-card gallery-card"
+                            data-category="flooring">
+                            <img
+                                src="./images/projects/Interior Flooring/interior_looring.jpg"
+                                alt="Hardwood Flooring Installation Thumbnail">
+                            <div class="project-overlay">
+                                <h4>Interior Flooring</h4>
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Interior Flooring</h3>
+                                <p>Interior Flooring</p>
+                            </div>
+                        </a>
+                        <a href="./project-details/exterior-flooring.html"
+                            class="project-card gallery-card"
+                            data-category="flooring">
+                            <img
+                                src="./images/projects/Exterior Flooring/exterior_flooring.jpg"
+                                alt="Laminate Flooring Replacement Thumbnail">
+                            <div class="project-overlay">
+                                <h4>Exterior Flooring </h4>
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Exterior Flooring</h3>
+                                <p>Exterior Flooring</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="final-cta-section">
+                <div class="container">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Contact Eraar Construction today for a no-obligation
+                        consultation and expert advice.</p>
+                    <a href="/contact/" class="cta-button primary">CONTACT US
+                        TODAY</a>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+
+        <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js"
+            crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/page-hero.js"></script>
+        <script>
+     
+
+            // Gallery Tab Filtering Logic
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const galleryCards = document.querySelectorAll('.gallery-card');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterCategory = this.dataset.filter; // Get data-filter value (e.g., 'painting')
+
+                    galleryCards.forEach(card => {
+                        const cardCategory = card.dataset.category; // Get data-category value from card
+
+                        if (filterCategory === 'all' || cardCategory === filterCategory) {
+                            card.style.display = 'block'; // Or 'flex' if using flexbox for card layout
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initial filter: Show all projects when page loads
+            document.querySelector('.tab-button[data-filter="all"]').click(); // Simulate click on 'All' button
+        
+    </script>
+    </body>
+</html>

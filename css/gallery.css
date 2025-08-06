@@ -1,0 +1,98 @@
+/* --- Page Hero Section (for gallery, about etc.) --- */
+.page-hero {
+    background-color: var(--eraar-dark-blue);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+.page-hero h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.page-hero p {
+    color: var(--text-light);
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Gallery Section --- */
+.gallery-section {
+    padding: 80px 0;
+    /* background-color: white;  */
+
+    text-align: center; /* For centering the tabs navigation */
+}
+
+/* Tabs Navigation */
+.tabs-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    gap: 15px; /* Space between tabs */
+    margin-bottom: 50px;
+}
+.tab-button {
+    background-color: var(--neutral-light-grey);
+    color: var(--eraar-dark-blue);
+    border: 2px solid var(--neutral-light-grey);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+.tab-button:hover {
+    background-color: var(--eraar-dark-blue);
+    color: white;
+    border-color: var(--eraar-dark-blue);
+}
+.tab-button.active {
+    background-color: var(--eraar-gold-brown);
+    color: white;
+    border-color: var(--eraar-gold-brown);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Project Grid for Gallery (reusing and enhancing existing .projects-grid) */
+.gallery-grid {
+    /* Most styles will come from .projects-grid, but ensure flex/grid works for filtering */
+    display: grid; /* Keep grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px;
+    margin-top: 0; /* Adjust if previous section had margin-top */
+}
+
+.gallery-card {
+    /* Inherits from .project-card, no new styles needed unless you want specific visual differences */
+    /* Ensure img, overlay, and info styles are robust */
+    display: block; /* Important for JS display: 'none' / 'block' to work */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .tabs-navigation {
+        flex-direction: column; /* Stack tabs vertically on smaller screens */
+        align-items: center; /* Center stacked tabs */
+    }
+    .tab-button {
+        width: 80%; /* Make buttons wider */
+        max-width: 250px; /* Limit max width */
+    }
+}
+@media (max-width: 480px) {
+    .page-hero {
+        padding: 50px 0;
+    }
+    .page-hero h1 {
+        font-size: 2.2em;
+    }
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+    }
+}
