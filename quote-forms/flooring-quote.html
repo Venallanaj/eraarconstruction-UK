@@ -24,7 +24,7 @@
 
         <section class="quote-form-section content-section">
             <div class="container">
-                <form id="flooringForm" class="quote-form">
+                <form id="flooringForm" class="quote-form" action="/submit-flooring-quote.php"  method="POST" enctype="multipart/form-data">
                     <!-- Personal Details -->
                     <fieldset>
                         <legend>Your Details</legend>
@@ -67,32 +67,32 @@
                         <div class="form-group checkbox-group">
                             <label>Flooring Areas <span class="required">*</span></label>
                             <p class="form-helper-text">Select all areas where flooring will be installed.</p>
-                            <label><input type="checkbox" name="flooringAreas" value="living-room"> Living Room</label>
-                            <label><input type="checkbox" name="flooringAreas" value="kitchen"> Kitchen</label>
-                            <label><input type="checkbox" name="flooringAreas" value="bathroom"> Bathroom</label>
-                            <label><input type="checkbox" name="flooringAreas" value="bedroom"> Bedroom</label>
-                            <label><input type="checkbox" name="flooringAreas" value="hallway-stairs"> Hallway / Stairs</label>
-                            <label><input type="checkbox" name="flooringAreas" value="entire-floor"> Entire Floor</label>
-                            <label><input type="checkbox" name="flooringAreas" value="other"> Other</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="living-room"> Living Room</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="kitchen"> Kitchen</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="bathroom"> Bathroom</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="bedroom"> Bedroom</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="hallway-stairs"> Hallway / Stairs</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="entire-floor"> Entire Floor</label>
+                            <label><input type="checkbox" name="flooringAreas[]" value="other"> Other</label>
                         </div>
 
                         <div class="form-group">
                             <label for="uploadRoomPhotos">Upload Room Photos <span class="required">*</span></label>
                             <p class="form-helper-text">Upload photos of the existing flooring or areas where work is needed.</p>
-                            <input type="file" id="uploadRoomPhotos" name="uploadRoomPhotos" accept="image/*" multiple required>
+                            <input type="file" id="uploadRoomPhotos" name="uploadRoomPhotos[]" accept="image/*" multiple required>
                         </div>
 
                         <div class="form-group checkbox-group">
                             <label>Type of Flooring <span class="required">*</span></label>
                             <p class="form-helper-text">Choose the type of flooring you want installed.</p>
-                            <label><input type="checkbox" name="flooringType" value="laminate"> Laminate</label>
-                            <label><input type="checkbox" name="flooringType" value="vinyl"> Vinyl</label>
-                            <label><input type="checkbox" name="flooringType" value="engineered-wood"> Engineered Wood</label>
-                            <label><input type="checkbox" name="flooringType" value="solid-wood"> Solid Wood</label>
-                            <label><input type="checkbox" name="flooringType" value="lvt"> LVT (Luxury Vinyl Tile)</label>
-                            <label><input type="checkbox" name="flooringType" value="carpet"> Carpet</label>
-                            <label><input type="checkbox" name="flooringType" value="tiling"> Tiling</label>
-                            <label><input type="checkbox" name="flooringType" value="not-sure"> Not Sure Yet</label>
+                            <label><input type="checkbox" name="flooringType[]" value="laminate"> Laminate</label>
+                            <label><input type="checkbox" name="flooringType[]" value="vinyl"> Vinyl</label>
+                            <label><input type="checkbox" name="flooringType[]" value="engineered-wood"> Engineered Wood</label>
+                            <label><input type="checkbox" name="flooringType[]" value="solid-wood"> Solid Wood</label>
+                            <label><input type="checkbox" name="flooringType[]" value="lvt"> LVT (Luxury Vinyl Tile)</label>
+                            <label><input type="checkbox" name="flooringType[]" value="carpet"> Carpet</label>
+                            <label><input type="checkbox" name="flooringType[]" value="tiling"> Tiling</label>
+                            <label><input type="checkbox" name="flooringType[]" value="not-sure"> Not Sure Yet</label>
                         </div>
 
                         <div class="form-group radio-group">
@@ -106,10 +106,10 @@
                         <div class="form-group checkbox-group">
                             <label>Subfloor Preparation <span class="required">*</span></label>
                             <p class="form-helper-text">Tick any subfloor work you think might be needed.</p>
-                            <label><input type="checkbox" name="subfloorPreparation" value="new-underlay"> New Underlay</label>
-                            <label><input type="checkbox" name="subfloorPreparation" value="screed-levelling-compound"> Screed / Levelling Compound</label>
-                            <label><input type="checkbox" name="subfloorPreparation" value="dpm"> DPM (Damp Proof Membrane)</label>
-                            <label><input type="checkbox" name="subfloorPreparation" value="not-sure"> Not Sure</label>
+                            <label><input type="checkbox" name="subfloorPreparation[]" value="new-underlay"> New Underlay</label>
+                            <label><input type="checkbox" name="subfloorPreparation[]" value="screed-levelling-compound"> Screed / Levelling Compound</label>
+                            <label><input type="checkbox" name="subfloorPreparation[]" value="dpm"> DPM (Damp Proof Membrane)</label>
+                            <label><input type="checkbox" name="subfloorPreparation[]" value="not-sure"> Not Sure</label>
                         </div>
 
                         <div class="form-group">

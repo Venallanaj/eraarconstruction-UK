@@ -105,6 +105,10 @@ section:nth-of-type(odd) {
  /* background-color: var(--neutral-light-grey);  */
 }
 
+ .page-hero{
+   background-color: var(--neutral-light-grey); 
+
+}
 .section-intro {
   text-align: center;
   max-width: 800px;
@@ -226,7 +230,8 @@ section:nth-of-type(odd) {
 }
 .main-navigation .nav-menu li a:hover,
 .main-navigation .nav-menu li a.current-page {
-  color: var(--eraar-gold-brown);
+  border-bottom: 1px solid var(--eraar-gold-brown);
+  /* color: var(--eraar-gold-brown); */
 }
 /* Underline effect on hover/active */
 .main-navigation .nav-menu li a::after {
@@ -271,11 +276,12 @@ section:nth-of-type(odd) {
 }
 .hamburger {
   display: block;
+
   width: 100%;
   height: 3px;
   background-color: var(--header-text-color); /* CHANGED: Hamburger color */
-  position: absolute;
-  left: 0;
+  /* position: absolute;
+  left: 0; */
   top: 50%;
   transform: translateY(-50%);
   transition: background-color 0.3s ease;
@@ -774,7 +780,7 @@ section:nth-of-type(odd) {
     flex-grow: 1; /* Allow logo to grow slightly if needed */
   }
   .main-header .logo img {
-    height: 50px;
+    height: 70px;
   }
   .main-header .main-navigation {
     width: auto; /* Let navigation take natural width */
@@ -787,6 +793,7 @@ section:nth-of-type(odd) {
     margin: 0 15px 0 0; /* Add margin right for spacing next to hamburger */
     padding: 8px 15px; /* Smaller button on mobile */
     font-size: 0.8em; /* Smaller font on mobile */
+    display: none;
   }
 
   /* Mobile Menu Toggle & Overlay */

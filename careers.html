@@ -5,17 +5,99 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/careers.css">
         <title>Document</title>
     </head>
     <body>
         <div id="header-placeholder"></div>
         <main>
 
-               <div id="pageHeroPlaceholder"
-             data-title="Join Our Team"
-             data-description="Build Your Future with ERAAR Construction in London."
-            data-background="../images/page-hero-bg.JPG">
-        </div>
+            <div id="pageHeroPlaceholder"
+                data-title="Join Our Team"
+                data-description="Build Your Future with ERAAR Construction in London."
+                data-background="../images/page-hero-bg.JPG">
+            </div>
+
+            <!-- Job Application Section -->
+            <section id="application-form"
+                class="job-application-section section-padding">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Apply for a Position</h2>
+                        <p class="section-subtitle">Fill out the form below to
+                            apply for a specific role or to submit a general
+                            application.</p>
+                    </div>
+                    <div class="application-form-container">
+                        <form id="jobApplicationForm" class="application-form"
+                            enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobPosition">Applying For</label>
+                                <select id="jobPosition" name="jobPosition"
+                                    required>
+                                    <option value>Select a Position</option>
+                                    <option value="Site Manager">Site
+                                        Manager</option>
+                                    <option value="Plumber">Plumber</option>
+                                    <option
+                                        value="Apprentice Electrician">Apprentice
+                                        Electrician</option>
+                                    <option value="General Application">General
+                                        Application</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvFile">Attached CV (PDF
+                                    only)</label>
+                                <input type="file" id="cvFile" name="cvFile"
+                                    accept=".pdf" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message (Optional)</label>
+                                <textarea id="message" name="message"
+                                    rows="5"></textarea>
+                                <div id="formMessage"
+                                    class="form-message"></div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="label-checkbox"
+                                    style="display: flex; align-items: center; color: #333;">
+                                    <input type="checkbox"
+                                        id="privacyConsent"
+                                        name="privacyConsent" required
+                                        style="margin-right: 8px;">
+                                    I agree to the <a
+                                        href="/privacy-policy.html"
+                                        target="_blank"
+                                        style="margin-left: 5px;"> Privacy
+                                        Policy</a>.
+                                </label>
+                            </div>
+
+                            <button type="submit"
+                                class="cta-button primary  form-submit-btn">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
         </main>
         <div id="footer-placeholder"></div>
 
@@ -24,6 +106,28 @@
             crossorigin="anonymous"></script>
         <script src="./js/main.js"></script> <!-- Your main JavaScript file -->
         <script src="./js/page-hero.js"></script>
+        <script>
+         document.getElementById("jobApplicationForm").addEventListener("submit", function (e) {
+             e.preventDefault(); // Prevent default form submission         
+
+             const form = e.target;
+             const formData = new FormData(form);
+             const messageDiv = document.getElementById("formMessage");         
+
+             fetch('send_application.php', {
+                 method: 'POST',
+                 body: formData
+             })
+             .then(res => res.text())
+             .then(response => {
+                 messageDiv.innerHTML = `<p> ${response}</p>`;
+                 form.reset(); // Optional: clear the form
+             })
+             .catch(error => {
+                 messageDiv.innerHTML = `<p style="color: red;">❌ An error occurred. Please try again later.</p>`;
+             });
+         });
+</script>
 
     </body>
 </html>

@@ -16,7 +16,7 @@ const servicesData = [
         "icon": "fas fa-th-large",
         "title": "Flooring Services",
         "description": "Providing professional flooring solutions, from installation to repair, for various material types and applications.",
-        "link": "/quote-forms/flooring-quote.html"
+        "link": "./quote-forms/flooring-quote.html"
     },
 
   

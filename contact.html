@@ -37,14 +37,14 @@
                             <div class="contact-detail-group">
                                 <h3><i
                                         class="fas fa-map-marker-alt icon-brand-color"></i>
-                                    Our Office</h3>
-                                <p>ERAAR Construction Ltd.</p>
-                                <p>123 Construction Rd</p>
-                                <p>London, WC1A 1AA, UK</p>
-                                <a
+                                    Our  Locations</h3>
+                            
+                                <p>Reading, UK</p>
+                                <p>Manchester, UK</p>
+                                <!-- <a
                                     href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9094119932786!2d-0.1275995842270928!3d51.5113339796357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d1f2e1329b%3A0xcf95a024843b019!2sLondon!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
                                     target="_blank" rel="noopener noreferrer"
-                                    class="text-link">View on Map</a>
+                                    class="text-link">View on Map</a> -->
                             </div>
 
                             <div class="contact-detail-group">
@@ -53,11 +53,9 @@
                                     Call Us</h3>
                                 <p>General Inquiries: <a
                                         href="tel:+442012345678"
-                                        class="text-link">+44 20 1234
-                                        5678</a></p>
-                                <p>Emergency Line: <a href="tel:+442098765432"
-                                        class="text-link">+44 20 9876
-                                        5432</a></p>
+                                        class="text-link">+44 7742 700012</a></p>
+                                <!-- <p>Emergency Line: <a href="tel:+442098765432"
+                                        class="text-link">+44 7742 700012</a></p> -->
                             </div>
 
                             <div class="contact-detail-group">
@@ -76,16 +74,16 @@
                                 <h3><i
                                         class="fas fa-clock icon-brand-color"></i>
                                     Business Hours</h3>
-                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                                <p>Saturday - Sunday: Closed</p>
+                                <p>Monday - Friday: 6:00 AM - 7:00 PM</p>
+                                <p>Saturday: 9:00 AM - 5:00 PM</p>
+                                <p> Sunday: 10:00 AM - 5:00 PM</p>
                             </div>
                         </div>
 
                         <div class="contact-form-column">
                             <h3>Send Us a Message</h3>
-                       <form action="contact.php" method="POST">
+                          <form class="main-contact-form" action="contact.php" method="POST">
 
-                                class="main-contact-form">
                                 <div class="form-group">
                                     <label for="name">Your Name:</label>
                                     <input type="text" id="name" name="name"
@@ -102,11 +100,31 @@
                                         name="subject" required
                                         placeholder="Subject of your inquiry">
                                 </div>
+
                                 <div class="form-group">
                                     <label for="message">Your Message:</label>
                                     <textarea id="message" name="message"
                                         rows="6" required
                                         placeholder="Tell us about your project or question..."></textarea>
+
+                                    
+                                </div>
+                                <div id="formResponse"></div>
+
+
+                                <div class="form-group">
+                                    <label
+                                        style="display: flex; align-items: center;">
+                                        <input type="checkbox"
+                                            id="privacyConsent"
+                                            name="privacyConsent" required
+                                            style="margin-right: 8px;">
+                                        I agree to the <a
+                                            href="/privacy-policy.html"
+                                            target="_blank"
+                                            style="margin-left: 5px;"> Privacy
+                                            Policy</a>.
+                                    </label>
                                 </div>
                                 <button type="submit"
                                     class="btn btn-primary">Send
@@ -137,5 +155,32 @@
         <script src="./js/main.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/page-hero.js"></script>
+
+        <script>
+document.querySelector('.main-contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('contact.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(response => {
+        const responseDiv = document.getElementById('formResponse');
+        responseDiv.innerHTML = `<p  style="font-weight:500"> ${response}</p>`;
+     
+        form.reset(); // clear form after submit
+    })
+    .catch(err => {
+        const responseDiv = document.getElementById('formResponse');
+        responseDiv.innerHTML = '❌ There was an error. Please try again later.';
+        responseDiv.style.color = 'red';
+    });
+});
+</script>
+
     </body>
 </html>

@@ -24,7 +24,9 @@
 
         <section class="quote-form-section content-section">
             <div class="container">
-                <form id="renovationForm" class="quote-form">
+
+               <form id="renovationForm" class="quote-form" action="/submit-renovation-quote.php" method="POST" enctype="multipart/form-data">
+
                     <fieldset>
                         <legend>Your Details</legend>
 
@@ -72,21 +74,22 @@
                         <div class="form-group checkbox-group">
                             <label>Areas to Renovate <span class="required">*</span></label>
                             <p class="form-helper-text">Tick all areas included in the renovation.</p>
-                            <label><input type="checkbox" name="areasToRenovate" value="kitchen"> Kitchen</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="bathroom"> Bathroom</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="living-room"> Living Room</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="hallway-stairs"> Hallway / Stairs</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="bedrooms"> Bedroom(s)</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="loft"> Loft</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="garage"> Garage</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="garden-outdoor"> Garden / Outdoor</label>
-                            <label><input type="checkbox" name="areasToRenovate" value="entire-property"> Entire Property</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="kitchen"> Kitchen</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="bathroom"> Bathroom</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="living-room"> Living Room</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="hallway-stairs"> Hallway / Stairs</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="bedrooms"> Bedroom(s)</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="loft"> Loft</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="garage"> Garage</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="garden-outdoor"> Garden / Outdoor</label>
+                            <label><input type="checkbox" name="areasToRenovate[]" value="entire-property"> Entire Property</label>
                         </div>
 
                         <div class="form-group">
                             <label for="uploadPhotos">Upload Photos <span class="required">*</span></label>
-                            <p class="form-helper-text">Add images of the property or rooms to be renovated.</p>
-                            <input type="file" id="uploadPhotos" name="uploadPhotos" accept="image/*" multiple required>
+                          <p class="form-helper-text">Upload any relevant images of the space (max 5).</p>
+
+                            <input type="file" id="uploadPhotos" name="uploadPhotos[]" accept="image/*" multiple required>
                         </div>
 
                         <div class="form-group">
@@ -132,37 +135,37 @@
                                <div class="form-group checkbox-group">
                             <label>What Work Needs to Be Done? <span class="required">*</span></label>
                             <p class="form-helper-text">Select the specific work required.</p>
-                            <label><input type="checkbox" name="workToBeDone" value="painting-decorating"> Painting & Decorating</label>
-                            <label><input type="checkbox" name="workToBeDone" value="flooring"> Flooring</label>
-                            <label><input type="checkbox" name="workToBeDone" value="plastering"> Plastering</label>
-                            <label><input type="checkbox" name="workToBeDone" value="electrical"> Electrical</label>
-                            <label><input type="checkbox" name="workToBeDone" value="plumbing"> Plumbing</label>
-                            <label><input type="checkbox" name="workToBeDone" value="tiling"> Tiling</label>
-                            <label><input type="checkbox" name="workToBeDone" value="joinery"> Joinery</label>
-                            <label><input type="checkbox" name="workToBeDone" value="kitchen-fitting"> Kitchen Fitting</label>
-                            <label><input type="checkbox" name="workToBeDone" value="bathroom-installation"> Bathroom Installation</label>
-                            <label><input type="checkbox" name="workToBeDone" value="other-work"> Other</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="painting-decorating"> Painting & Decorating</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="flooring"> Flooring</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="plastering"> Plastering</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="electrical"> Electrical</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="plumbing"> Plumbing</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="tiling"> Tiling</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="joinery"> Joinery</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="kitchen-fitting"> Kitchen Fitting</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="bathroom-installation"> Bathroom Installation</label>
+                            <label><input type="checkbox" name="workToBeDone[]" value="other-work"> Other</label>
                         </div>
 
                         <div class="form-group checkbox-group">
                             <label>Are Any Doors or Windows Being Modified? <span class="required">*</span></label>
                             <p class="form-helper-text">Let us know if you're replacing or modifying doors/windows.</p>
-                            <label><input type="checkbox" name="doorWindowModification" value="new-doors"> New Doors</label>
-                            <label><input type="checkbox" name="doorWindowModification" value="remove-doors"> Remove Doors</label>
-                            <label><input type="checkbox" name="doorWindowModification" value="replace-windows"> Replace Windows</label>
-                            <label><input type="checkbox" name="doorWindowModification" value="add-skylights"> Add Skylights</label>
-                            <label><input type="checkbox" name="doorWindowModification" value="not-required"> Not Required</label>
+                            <label><input type="checkbox" name="doorWindowModification[]" value="new-doors"> New Doors</label>
+                            <label><input type="checkbox" name="doorWindowModification[]" value="remove-doors"> Remove Doors</label>
+                            <label><input type="checkbox" name="doorWindowModification[]" value="replace-windows"> Replace Windows</label>
+                            <label><input type="checkbox" name="doorWindowModification[]" value="add-skylights"> Add Skylights</label>
+                            <label><input type="checkbox" name="doorWindowModification[]" value="not-required"> Not Required</label>
                         </div>
 
                         <div class="form-group checkbox-group">
                             <label>Are Any Walls, Ceilings, or Structural Features Being Altered? <span class="required">*</span></label>
                             <p class="form-helper-text">Tick all that apply.</p>
-                            <label><input type="checkbox" name="structuralAlteration" value="wall-removal"> Wall Removal</label>
-                            <label><input type="checkbox" name="structuralAlteration" value="add-partition"> Add Partition</label>
-                            <label><input type="checkbox" name="structuralAlteration" value="ceiling-lowering"> Ceiling Lowering</label>
-                            <label><input type="checkbox" name="structuralAlteration" value="chimney-removal"> Chimney Removal</label>
-                            <label><input type="checkbox" name="structuralAlteration" value="none"> None</label>
-                            <label><input type="checkbox" name="structuralAlteration" value="other-structural"> Other</label>
+                            <label><input type="checkbox" name="structuralAlteration[]" value="wall-removal"> Wall Removal</label>
+                            <label><input type="checkbox" name="structuralAlteration[]" value="add-partition"> Add Partition</label>
+                            <label><input type="checkbox" name="structuralAlteration[]" value="ceiling-lowering"> Ceiling Lowering</label>
+                            <label><input type="checkbox" name="structuralAlteration[]" value="chimney-removal"> Chimney Removal</label>
+                            <label><input type="checkbox" name="structuralAlteration[]" value="none"> None</label>
+                            <label><input type="checkbox" name="structuralAlteration[]" value="other-structural"> Other</label>
                         </div>
 
                         <div class="form-group radio-group">

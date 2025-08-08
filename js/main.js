@@ -1,6 +1,6 @@
 // --- Client-side component loading function ---
 async function loadComponent(elementId, filePath, callback = null) {
-    debugger;
+  
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
@@ -18,7 +18,7 @@ async function loadComponent(elementId, filePath, callback = null) {
 
 // --- JavaScript for Active Navigation Link Highlighting ---
 function highlightActiveNav() {
-    debugger;
+ 
     const navLinks = document.querySelectorAll('#primary-menu a');
     const currentPath = window.location.pathname; // Get the path from the URL
 

@@ -1,0 +1,9 @@
+.social-links i {
+      color: #1a375e;
+      font-size: 2.4rem;
+    
+}
+
+.social-links i:hover{
+   color:#c09a53;
+}

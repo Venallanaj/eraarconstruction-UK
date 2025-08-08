@@ -24,7 +24,9 @@
 
         <section class="quote-form-section content-section">
             <div class="container">
-                <form id="paintingDecoratingForm" class="quote-form">
+                <form id="paintingDecoratingForm" class="quote-form" method="POST" action="/submit-quote.php" enctype="multipart/form-data">
+
+            
                     <fieldset>
                         <legend>Your Details</legend>
 
@@ -73,17 +75,17 @@
                         <div class="form-group checkbox-group">
                             <label>Additional Rooms <span class="required">*</span></label>
                             <p class="form-helper-text">Select any other rooms that need work.</p>
-                            <label><input type="checkbox" name="additionalRooms" value="kitchen"> Kitchen</label>
-                            <label><input type="checkbox" name="additionalRooms" value="bathroom"> Bathroom</label>
-                            <label><input type="checkbox" name="additionalRooms" value="living-room"> Living Room</label>
-                            <label><input type="checkbox" name="additionalRooms" value="dining-room"> Dining Room</label>
-                            <label><input type="checkbox" name="additionalRooms" value="hallway-landing"> Hallway / Landing</label>
-                            <label><input type="checkbox" name="additionalRooms" value="stairs"> Stairs</label>
-                            <label><input type="checkbox" name="additionalRooms" value="wc-toilet"> WC / Toilet</label>
-                            <label><input type="checkbox" name="additionalRooms" value="utility-room"> Utility Room</label>
-                            <label><input type="checkbox" name="additionalRooms" value="garage"> Garage</label>
-                            <label><input type="checkbox" name="additionalRooms" value="garden-exterior"> Garden / Exterior</label>
-                            <label><input type="checkbox" name="additionalRooms" value="other-room"> Other</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="kitchen"> Kitchen</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="bathroom"> Bathroom</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="living-room"> Living Room</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="dining-room"> Dining Room</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="hallway-landing"> Hallway / Landing</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="stairs"> Stairs</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="wc-toilet"> WC / Toilet</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="utility-room"> Utility Room</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="garage"> Garage</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="garden-exterior"> Garden / Exterior</label>
+                            <label><input type="checkbox" name="additionalRooms[]" value="other-room"> Other</label>
                         </div>
                     </fieldset>
 
@@ -107,28 +109,28 @@
                         <div class="form-group checkbox-group">
                             <label>Preferred Paint Brand <span class="required">*</span></label>
                             <p class="form-helper-text">Choose which brand(s) you'd like us to use.</p>
-                            <label><input type="checkbox" name="paintBrand" value="dulux-trade"> Dulux Trade</label>
-                            <label><input type="checkbox" name="paintBrand" value="dulux-heritage"> Dulux Heritage</label>
-                            <label><input type="checkbox" name="paintBrand" value="crown"> Crown</label>
-                            <label><input type="checkbox" name="paintBrand" value="johnstones"> Johnstone's</label>
-                            <label><input type="checkbox" name="paintBrand" value="farrow-ball"> Farrow & Ball</label>
-                            <label><input type="checkbox" name="paintBrand" value="little-greene"> Little Greene</label>
-                            <label><input type="checkbox" name="paintBrand" value="benjamin-moore"> Benjamin Moore</label>
-                            <label><input type="checkbox" name="paintBrand" value="sherwin-williams"> Sherwin-Williams</label>
-                            <label><input type="checkbox" name="paintBrand" value="no-preference"> No Preference</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="dulux-trade"> Dulux Trade</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="dulux-heritage"> Dulux Heritage</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="crown"> Crown</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="johnstones"> Johnstone's</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="farrow-ball"> Farrow & Ball</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="little-greene"> Little Greene</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="benjamin-moore"> Benjamin Moore</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="sherwin-williams"> Sherwin-Williams</label>
+                            <label><input type="checkbox" name="paintBrand[]" value="no-preference"> No Preference</label>
                         </div>
 
                         <div class="form-group checkbox-group">
                             <label>Preferred Paint Finish <span class="required">*</span></label>
                             <p class="form-helper-text">Select the type of paint finish you'd prefer.</p>
-                            <label><input type="checkbox" name="paintFinish" value="vinyl-matt"> Vinyl Matt</label>
-                            <label><input type="checkbox" name="paintFinish" value="durable-matt"> Durable Matt</label>
-                            <label><input type="checkbox" name="paintFinish" value="soft-sheen"> Soft Sheen</label>
-                            <label><input type="checkbox" name="paintFinish" value="satinwood"> Satinwood</label>
-                            <label><input type="checkbox" name="paintFinish" value="gloss"> Gloss</label>
-                            <label><input type="checkbox" name="paintFinish" value="eggshell"> Eggshell</label>
-                            <label><input type="checkbox" name="paintFinish" value="easycare-washable"> EasyCare / Washable</label>
-                            <label><input type="checkbox" name="paintFinish" value="no-preference-finish"> No Preference</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="vinyl-matt"> Vinyl Matt</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="durable-matt"> Durable Matt</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="soft-sheen"> Soft Sheen</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="satinwood"> Satinwood</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="gloss"> Gloss</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="eggshell"> Eggshell</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="easycare-washable"> EasyCare / Washable</label>
+                            <label><input type="checkbox" name="paintFinish[]" value="no-preference-finish"> No Preference</label>
                         </div>
 
                         <div class="form-group">
@@ -140,7 +142,7 @@
                         <div class="form-group">
                             <label for="uploadPhotos">Upload Photos</label>
                             <p class="form-helper-text">Upload any relevant images of the space (max 5).</p>
-                            <input type="file" id="uploadPhotos" name="uploadPhotos" accept="image/*" multiple>
+                            <input type="file" id="uploadPhotos"  name="uploadPhotos[]" multiple accept="image/*" multiple required>
                         </div>
 
                         <div class="form-group">
